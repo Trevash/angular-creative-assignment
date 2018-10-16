@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Angular Creative Assignment</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+        <script src="product.js"></script>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+
+    <body>
+        <div ng-app="product" ng-controller="mainCtrl">
+            <div class="product-image">
+                <img ng-src="{{ image() }}" style="width: 100px; height: 300px;" />
+            </div>
+
+            <div class="product-info">
+                <h1>{{ product }}</h1>
+                <p ng-if="inStock()">In Stock</p>
+                <p ng-if="!inStock()">Out of stock!</p>
+
+                <div ng-repeat="variant in variants">
+                    <p>{{ variant.brand }}</p>
+                </div>
+
+                <button ng-click="addToCart()">Add to cart</button>
+
+                <p>Cart ({{ cart }})</p>
+            </div>
+        </div>
+
+    </body>
+</html>
