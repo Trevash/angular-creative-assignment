@@ -13,11 +13,15 @@
             <div class="product-image">
                 <img ng-src="{{ image() }}" style="width: 100px; height: 300px;" />
             </div>
+            
+            <!--<div class="product-details">-->
+            <!--    <p ng-mouseover = "{{ details() }}">here</p>-->
+            <!--</div>-->
 
             <div class="product-info">
                 <h1>{{ product }}</h1>
                 <p ng-if="inStock()">In Stock</p>
-                <p ng-if="!inStock()">Out of stock!</p>
+                <p ng-if="!inStock()">Out of Stock!</p>
 
                 <div ng-repeat="variant in variants">
                     <p>{{ variant.brand }}</p>
@@ -28,6 +32,5 @@
                 <p>Cart ({{ cart }})</p>
             </div>
         </div>
-
     </body>
 </html>
