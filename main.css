@@ -7,3 +7,13 @@ body {
   background-size: cover;
   position: relative;
 }
+
+.product-image{
+    position: relative;
+    left: 12%;
+    /*background-color: white;*/
+}
+
+/*p{*/
+    
+/*}*/

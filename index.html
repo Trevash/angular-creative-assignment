@@ -11,20 +11,21 @@
     <body>
         <div ng-app="product" ng-controller="mainCtrl">
             <div class="product-image">
-                <img ng-src="{{ image() }}" style="width: 100px; height: 300px;" />
+                <img ng-src="{{ image() }}" style="width: 1000px; height: 200px" />
             </div>
-            
+            <!--style="width: 1000px; height: 300px;-->
             <!--<div class="product-details">-->
             <!--    <p ng-mouseover = "{{ details() }}">here</p>-->
             <!--</div>-->
 
             <div class="product-info">
                 <h1>{{ product }}</h1>
-                <p ng-if="inStock()">In Stock</p>
-                <p ng-if="!inStock()">Out of Stock!</p>
+                <p ng-if="inStock()"><b>In Stock</b></p>
+                <p ng-if="!inStock()"><b>Out of Stock!</b></p>
 
                 <div ng-repeat="variant in variants">
-                    <p>{{ variant.brand }}</p>
+                    <h2>{{ variant.brand }}</h2>
+                    <p><b>{{ details() }}</b></p>
                 </div>
 
                 <button ng-click="addToCart()">Add to cart</button>
