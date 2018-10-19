@@ -20,12 +20,16 @@
 
             <div class="product-info">
                 <h1>{{ product }}</h1>
-                <p ng-if="inStock()"><b>In Stock</b></p>
-                <p ng-if="!inStock()"><b>Out of Stock!</b></p>
+                <p><b>{{ details() }}</b></p>
 
-                <div ng-repeat="variant in variants">
+                <h3 ng-if="inStock()"><b>In Stock</b></h3>
+                <h3 ng-if="!inStock()" style="color: red;"><b>Out of Stock!</b></h3>
+
+                <br />
+
+                <div ng-repeat="variant in variants" ng-click="updateProduct(variant.id)" class="brand">
                     <h2>{{ variant.brand }}</h2>
-                    <p><b>{{ details() }}</b></p>
+                    <img ng-src="{{ variant.logo }}" style="width: 100px; height: 100px" />
                 </div>
 
                 <button ng-click="addToCart()">Add to cart</button>

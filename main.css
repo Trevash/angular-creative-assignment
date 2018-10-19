@@ -11,9 +11,9 @@ body {
 .product-image{
     position: relative;
     left: 12%;
-    /*background-color: white;*/
 }
 
-/*p{*/
-    
-/*}*/
+.brand {
+  float: left;
+  width: 200px;
+}

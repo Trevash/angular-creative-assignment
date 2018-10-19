@@ -13,6 +13,7 @@ function mainCtrl($scope) {
         {
             id: 0,
             brand: "HEAD",
+            logo: "./images/headLogo.jpeg",
             image: "./images/headSki.jpg",
             quantity: 1,
             details: "Get off piste with the Kore 105 and show your "
@@ -28,8 +29,9 @@ function mainCtrl($scope) {
         {
             id: 1,
             brand: "K2",
+            logo: "./images/k2Logo.png",
             image: "./images/k2skis.png",
-            quantity: 1,
+            quantity: 3,
             details: "Shane McConkey arguably single-handedly changed the "
             +"direction of the sport of skiing and ski design with his "
             +"devil-may-care attitude and out-of-the-box thinking about "
@@ -41,8 +43,9 @@ function mainCtrl($scope) {
         {
             id: 2,
             brand: "Salomon",
+            logo: "./images/salomonLogo.png",
             image: "./images/salomonSkis.jpg",
-            quantity: 1,
+            quantity: 2,
             details: "QST 118 is the widest ski in the range, with full twin rocker "
             +"to help you float in the deepest powder. You can also charge with "
             +"confidence with the C/FX 3 layer, a unique reinforcement that "
@@ -52,8 +55,9 @@ function mainCtrl($scope) {
         {
             id: 3,
             brand: "Atomic",
+            logo: "./images/atomicLogo.jpeg",
             image: "./images/atomicSkis.jpg",
-            quantity: 1,
+            quantity: 5,
             details: "Pure powder. Pure power. Pure fun. The Atomic Bent Chetler 120 "
             +"isn’t a ski for everybody – but for those skiers we do build it for, "
             +"we’re sure there’s no better ski on the market. "
@@ -72,27 +76,27 @@ function mainCtrl($scope) {
     ];
     
     $scope.details = function() {
-        console.log("Ski details");
         return $scope.variants[$scope.selectedVariant].details;
     }
-    
+
     $scope.addToCart = function() {
-        console.log("Adding to cart")
         if ($scope.inStock()){
             $scope.cart += 1;
             $scope.variants[$scope.selectedVariant].quantity -= 1;
         }
         else {
-            window.alert("Cannot Add More");
+            window.alert("Cannot Add More, out of Stock");
         }
     }
 
+    $scope.updateProduct = function (variantId) {
+        $scope.selectedVariant = variantId;
+    }
+
     $scope.image = function() {
-        console.log("Looking for image")
         return $scope.variants[$scope.selectedVariant].image;
     }
     $scope.inStock = function() {
-        console.log("Got here in stock")
         return $scope.variants[$scope.selectedVariant].quantity > 0;
     }
 }
