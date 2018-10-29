@@ -23,8 +23,7 @@ function mainCtrl($scope) {
             +"wood core makes it extremely light weight. Even with a "
             +"105 mm waist, it's the lightest ski of its type on the "
             +"market. And if there is no powder around, the Kore 105 will "
-            +"never let you down on the piste either.",
-            //logo: "./images/headLogo.gif"
+            +"never let you down on the piste either."
         },
         {
             id: 1,
@@ -37,8 +36,7 @@ function mainCtrl($scope) {
             +"devil-may-care attitude and out-of-the-box thinking about "
             +"what a ski can do. His legend lives on in the K2 Pon2oon, a "
             +"full on power powder ski that is designed to do one thing—rip "
-            +"deep snow on THE pow day of the year.",
-            //logo: "./images/k2Logo.png"
+            +"deep snow on THE pow day of the year."
         },
         {
             id: 2,
@@ -49,8 +47,7 @@ function mainCtrl($scope) {
             details: "QST 118 is the widest ski in the range, with full twin rocker "
             +"to help you float in the deepest powder. You can also charge with "
             +"confidence with the C/FX 3 layer, a unique reinforcement that "
-            +"delivers all the power of metal at a fraction of the weight.",
-            //logo: "./images/salomonLogo.png"
+            +"delivers all the power of metal at a fraction of the weight."
         },
         {
             id: 3,
@@ -70,8 +67,7 @@ function mainCtrl($scope) {
             +"and Carbon Backbone add strength and stiffness. There’s no skier too skilled " 
             +"for the Bent Chetler 120 – for off-piste, heli-skiing or backcountry adventures, " 
             +"it’s going to deliver whatever you demand of it. You’ve never known stoke "
-            +"until you’ve sent it on the Bent Chetler 120.",
-            //logo: "./atomicLogo.jpeg"
+            +"until you’ve sent it on the Bent Chetler 120."
         }
     ];
     
@@ -85,7 +81,7 @@ function mainCtrl($scope) {
             $scope.variants[$scope.selectedVariant].quantity -= 1;
         }
         else {
-            window.alert("Cannot Add More, out of Stock");
+            window.alert("Cannot Add More, Out of Stock");
         }
     }
 
